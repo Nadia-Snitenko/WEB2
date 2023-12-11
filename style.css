@@ -1,0 +1,217 @@
+@keyframes color {
+    0%   { background: #6492f4; }
+    15%  { background: #b447ef; }
+    30%  { background: #e73c7e; }
+    45%  { background: #ee7752; }
+    60%  { background: #FCCA00; }
+    75%  { background: #33CC36; }
+    90%  { background: #23d5ab; }
+    100% { background: #36aff0; }
+  }
+
+body {
+    font-family: 'Comic Sans', cursive;
+    font-weight: 500;
+    background: linear-gradient(90deg,#ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: color 45s infinite linear;
+	transform: translate3d(0, 0, 0);
+}
+
+:root {
+    --select-border: #fff6e9;
+    --select-focus: rgb(168, 171, 174);
+    --select-arrow: var(--select-border);
+}
+
+table {
+    box-shadow: 0px 5px 7px #bfccdc;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255, 0.5);
+    margin: 40px 10px 40px 10px;
+}
+
+table td {
+    padding: 15px 10px 15px 10px;
+    color: #262626;
+    border: 1px solid #ffffff;
+}
+
+select {
+    width: 20%;
+    min-width: 10ch;
+    max-width: 35ch;
+    border: 1px solid var(--select-border);
+    border-radius: 5px;
+    padding: 16px 32px;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    font-size: 14px;
+    box-shadow: 0px 3px 10px #bfccdc;
+}
+
+select::-ms-expand {
+    display: none;
+    border: 1px solid #97c8f0;
+}
+
+.select-fields {
+    text-align: left;
+    width: 50%;
+}
+
+.schedule-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#schedule {
+    margin: 10px auto;
+}
+
+.schedule-container__header, .schedule-container__mobile-actions  {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 0px 0px;
+}
+
+#currentWeek {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.7s;
+    cursor: pointer;
+    box-shadow: 0px 2px 9px #ffffff;
+}
+
+button:hover {
+    background-color: rgb(78, 80, 81);
+    color: #ffffff;
+    box-shadow: 0px 3px 10px #fefefe;
+}
+
+.first-row{
+    line-height: 1.5;
+    color: #373a3c;
+    font-size: 20px;
+    text-align: center;
+}
+
+.one-row{
+    line-height: 1.5;
+    color: #373a3c;
+    text-align: left;
+}
+
+#previousButton, #nextButton {
+    font-family: 'Comic Sans', cursive;
+    height: 10%;
+    margin-top: 40px;
+}
+
+.one-cell{
+    vertical-align: top;
+}
+
+.text-style1 {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .15px;
+    font-weight: 500;
+}
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#previousDay, #nextDay {
+    display: none;
+}
+
+#select, #selectTeacher {
+    font-family: 'Comic Sans', cursive;
+    width: 35ch;
+}
+
+#select {
+    margin-bottom: 10px;
+    font-family: 'Comic Sans', cursive;
+}
+
+.container {
+    width: 55ch;
+    margin: 0 auto;
+}
+  
+.search-container {
+    font-family: 'Comic Sans', cursive;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+input[type="text"] {
+    font-family: 'Comic Sans', cursive;
+    font-weight: 500;
+    width: 60%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #111;
+}
+
+@media screen and (max-width: 481px) {
+    button {
+        font-size: 10px;
+        padding: 4px 8px;
+        margin: 2px 1px;
+        height: 30px;
+    }
+
+    #currentWeek {
+        font-size: 10px;
+    }
+
+    #select, #selectTeacher {
+        width: 100px;
+    }
+
+    select {
+        min-width: 6ch;
+        max-width: 15ch;
+        max-height: 25px;
+        padding: 5px 10px;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .schedule-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #previousButton, #nextButton {
+        height: 10%;
+        margin-top: 0;
+    }
+}
